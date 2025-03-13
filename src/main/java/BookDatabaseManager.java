@@ -22,7 +22,7 @@ import java.util.List;
 public class BookDatabaseManager {
     private final String URL = "jdbc:mysql://127.0.0.1:3306/books?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
     private static final String USER = "root";
-    private static final String PASSWORD = "1qaz2w";
+    private static final String PASSWORD = ""; //ENTER YOUR PASSWORD!
 
     static {
         try {
