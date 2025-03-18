@@ -119,9 +119,11 @@ public class LibraryData extends HttpServlet {
             book.addAuthor(author);
 
             //insert the book into the db
-            boolean success = dbManager.addBook(book);
+            boolean successfullyAddedBook = dbManager.addBook(book);
+            boolean successfullyAddedAuthor = dbManager.addAuthor(author);
 
-            if (success) {
+
+            if (successfullyAddedBook && successfullyAddedAuthor) {
                 response.sendRedirect("index.jsp?msg=Book+added+successfully");
             } else {
                 response.sendRedirect("index.jsp?msg=Database+insertion+failed");
